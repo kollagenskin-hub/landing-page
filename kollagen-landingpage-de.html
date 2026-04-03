@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollagen Naturalny Silver – Premium Hautpflege</title>
+  <meta name="description" content="Natürliches Kollagen für eine bewusste Pflegeroutine. Wähle 100 ml oder 200 ml und bestelle sicher online." />
+  <style>
+    :root{
+      --bg:#f7f4ef;
+      --text:#171717;
+      --muted:#525252;
+      --card:#ffffff;
+      --line:rgba(0,0,0,.08);
+      --dark:#171717;
+      --green:#15803d;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --shadow-strong:0 20px 50px rgba(0,0,0,.12);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(1180px, calc(100% - 48px));
+      margin:0 auto;
+    }
+
+    .hero{
+      padding:64px 0 56px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      padding:8px 16px;
+      border-radius:999px;
+      background:#fff;
+      box-shadow:var(--shadow);
+      font-size:14px;
+    }
+
+    h1{
+      margin:18px 0 0;
+      font-size:clamp(42px, 6vw, 72px);
+      line-height:1.04;
+      font-weight:600;
+      letter-spacing:-0.03em;
+    }
+
+    .lead{
+      margin:24px 0 0;
+      max-width:680px;
+      font-size:21px;
+      line-height:1.65;
+      color:var(--muted);
+    }
+
+    .checks{
+      margin:24px 0 0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+      color:#262626;
+    }
+
+    .checks li{
+      position:relative;
+      padding-left:22px;
+    }
+
+    .checks li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      font-weight:700;
+    }
+
+    .cta-row{
+      margin:30px 0 0;
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:58px;
+      padding:0 28px;
+      border-radius:18px;
+      font-weight:600;
+      transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+      cursor:pointer;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      background:var(--dark);
+      color:#fff;
+      box-shadow:var(--shadow-strong);
+    }
+    .btn-secondary{
+      background:transparent;
+      border:1px solid var(--line);
+    }
+    .btn-light{
+      background:#fff;
+      color:var(--dark);
+    }
+
+    .micro{
+      margin:18px 0 0;
+      display:grid;
+      gap:6px;
+      font-size:14px;
+      color:#666;
+    }
+
+    .hero-card{
+      max-width:440px;
+      margin-inline:auto;
+      background:var(--card);
+      padding:24px;
+      border-radius:32px;
+      box-shadow:var(--shadow-strong);
+    }
+
+    .image-box{
+      aspect-ratio:4/5;
+      border-radius:20px;
+      background:#f6f2ec;
+      padding:34px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .product-img{
+      max-height:100%;
+      width:auto;
+      object-fit:contain;
+      filter:drop-shadow(0 20px 24px rgba(0,0,0,.12));
+    }
+
+    .hero-card .eyebrow{
+      margin-top:20px;
+      font-size:13px;
+      text-transform:uppercase;
+      color:#737373;
+      letter-spacing:.08em;
+    }
+
+    .hero-card h2{
+      margin:8px 0 0;
+      font-size:32px;
+      line-height:1.15;
+      font-weight:600;
+    }
+
+    .hero-card p{
+      margin:10px 0 0;
+      color:#666;
+      font-size:15px;
+    }
+
+    section{
+      padding:34px 0;
+    }
+
+    .section-narrow{
+      width:min(900px, calc(100% - 48px));
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .section-narrow h2{
+      margin:0;
+      font-size:clamp(30px, 4vw, 42px);
+      line-height:1.15;
+      font-weight:600;
+    }
+
+    .section-narrow p{
+      margin:16px 0 0;
+      color:#575757;
+      font-size:18px;
+    }
+
+    .cards-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:24px;
+      margin-top:32px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .review-stars{
+      font-size:22px;
+      letter-spacing:1px;
+    }
+
+    .review-text{
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    .review-meta{
+      margin-top:10px;
+      font-size:14px;
+      color:#737373;
+    }
+
+    .pricing{
+      padding-top:56px;
+      padding-bottom:70px;
+    }
+
+    .pricing-head{
+      text-align:center;
+    }
+
+    .pricing-head .green{
+      color:var(--green);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .pricing-head h2{
+      margin:10px 0 0;
+      font-size:clamp(34px, 4.6vw, 46px);
+      line-height:1.12;
+      font-weight:600;
+    }
+
+    .price-grid{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:28px;
+    }
+
+    .price-card{
+      background:#fff;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:32px;
+      border:1px solid transparent;
+    }
+
+    .price-card.featured{
+      border:2px solid #171717;
+    }
+
+    .price-topnote{
+      font-size:14px;
+      font-weight:600;
+      color:#737373;
+      min-height:22px;
+    }
+
+    .price-card h3{
+      margin:8px 0 0;
+      font-size:34px;
+      line-height:1.15;
+      font-weight:600;
+    }
+
+    .price-desc{
+      margin-top:14px;
+      color:#5f5f5f;
+      font-size:18px;
+    }
+
+    .price{
+      margin-top:18px;
+      font-size:40px;
+      line-height:1;
+      font-weight:700;
+    }
+
+    .small{
+      margin-top:8px;
+      font-size:15px;
+      color:#737373;
+    }
+
+    .small.green{
+      color:var(--green);
+      font-weight:600;
+    }
+
+    .order-btn{
+      margin-top:24px;
+      width:max-content;
+      padding:14px 22px;
+      min-height:auto;
+      border-radius:14px;
+    }
+
+    .faq{
+      width:min(980px, calc(100% - 48px));
+      margin:0 auto;
+      padding-top:24px;
+      padding-bottom:60px;
+    }
+
+    .faq h2{
+      text-align:center;
+      margin:0 0 28px;
+      font-size:clamp(30px, 4vw, 42px);
+      font-weight:600;
+    }
+
+    .faq-list{
+      display:grid;
+      gap:16px;
+    }
+
+    .faq-item{
+      background:#fff;
+      border-radius:20px;
+      box-shadow:0 4px 18px rgba(0,0,0,.05);
+      border:1px solid rgba(0,0,0,.05);
+      padding:22px 24px;
+    }
+
+    .faq-item h3{
+      margin:0;
+      font-size:18px;
+    }
+
+    .faq-item p{
+      margin:10px 0 0;
+      color:#575757;
+      font-size:17px;
+    }
+
+    .final-cta{
+      background:#171717;
+      color:#fff;
+      padding:78px 0;
+      text-align:center;
+    }
+
+    .final-cta h2{
+      margin:0;
+      font-size:clamp(38px, 5vw, 54px);
+      line-height:1.1;
+      font-weight:600;
+    }
+
+    .final-cta p{
+      margin:18px auto 0;
+      max-width:700px;
+      color:rgba(255,255,255,.78);
+      font-size:19px;
+    }
+
+    .final-cta .btn{
+      margin-top:28px;
+      padding-inline:30px;
+      border-radius:18px;
+    }
+
+    .final-cta .hint{
+      margin-top:16px;
+      color:rgba(255,255,255,.62);
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      padding:28px 20px 34px;
+      color:#737373;
+      font-size:14px;
+    }
+
+    @media (max-width: 900px){
+      .container{width:min(100% - 32px, 1180px)}
+      .grid-2,.cards-2,.price-grid{grid-template-columns:1fr}
+      .hero{padding-top:44px}
+      h1{font-size:clamp(38px, 12vw, 58px)}
+      .lead{font-size:18px}
+      .hero-card{max-width:100%}
+      .cta-row .btn{width:100%}
+      .order-btn{width:100%; justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="container grid-2">
+      <div>
+        <div class="pill">Natürliches Kollagen • Premium Hautpflege</div>
+
+        <h1>Spürbar gepflegte, elastische Haut</h1>
+
+        <p class="lead">
+          Minimalistische Pflegeroutine mit natürlichem Kollagen – entwickelt für Frauen, die ihre Haut bewusst pflegen möchten.
+        </p>
+
+        <ul class="checks">
+          <li>Natürlich & minimalistisch</li>
+          <li>Frisch direkt vom Hersteller</li>
+          <li>Bestseller in Hautpflegeroutinen</li>
+        </ul>
+
+        <div class="cta-row">
+          <a href="#groesse" class="btn btn-primary">Jetzt bestellen</a>
+          <a href="#faq" class="btn btn-secondary">FAQ ansehen</a>
+        </div>
+
+        <div class="micro">
+          <div>🔥 Begrenzte Aktion: kostenloser Versand ab 200 ml</div>
+          <div>✓ Sichere Zahlung &nbsp; ✓ Versand aus der EU &nbsp; ✓ Direkt vom Hersteller</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="image-box">
+          <img
+            src="https://i.imgur.com/gGoOzu4.png"
+            alt="Kollagen Naturalny Silver"
+            class="product-img"
+          />
+        </div>
+
+        <div class="eyebrow">Empfehlung</div>
+        <h2>Kollagen Naturalny Silver</h2>
+        <p>Natürliches Kollagen aus Fischhaut</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-narrow">
+      <h2>Viele Produkte versprechen viel – liefern aber wenig</h2>
+      <p>
+        Trockene Haut, erste Fältchen und Spannungsgefühl sind oft Zeichen dafür, dass die Haut an Elastizität und Feuchtigkeit verliert.
+      </p>
+      <p>
+        Dieses Kollagen setzt auf eine einfache, minimalistische Formel – direkt auf die Haut angewendet.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-narrow" style="padding:0;">
+        <h2 style="font-size:32px;">Erfahrungen</h2>
+      </div>
+      <div class="cards-2">
+        <div class="card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Meine Haut fühlt sich viel gepflegter an und sieht glatter aus.</div>
+          <div class="review-meta">— Laura, München</div>
+        </div>
+        <div class="card">
+          <div class="review-stars">★★★★★</div>
+          <div class="review-text">Sehr angenehm in der Anwendung und perfekt für meine tägliche Routine.</div>
+          <div class="review-meta">— Anna, Berlin</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-narrow">
+      <h2>Warum jetzt starten?</h2>
+      <p>
+        Mit dem Wechsel in die wärmeren Monate braucht die Haut besonders viel Pflege und Feuchtigkeit.
+      </p>
+      <p>
+        Viele beginnen gerade jetzt mit einer bewussten Pflegeroutine für den Sommer.
+      </p>
+      <p style="font-weight:600;color:#171717;">
+        Wichtig: Bei sehr hohen Temperaturen wird der Versand pausiert, um die Qualität des Produkts zu schützen.
+      </p>
+      <p>
+        Bestelle daher am besten jetzt deinen Vorrat.
+      </p>
+    </div>
+  </section>
+
+  <section id="groesse" class="pricing">
+    <div class="container">
+      <div class="pricing-head">
+        <div class="green">Nur heute: Kostenloser Versand ab 200 ml</div>
+        <h2>Wähle deine Größe</h2>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="price-topnote">&nbsp;</div>
+          <h3>100 ml</h3>
+          <div class="price-desc">Ideal zum Kennenlernen.</div>
+          <div class="price">79 €</div>
+          <div class="small">+ 15 € Versand</div>
+          <a
+            href="https://buy.stripe.com/6oU9ATghNdSYam6aqOfUQ01"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary order-btn"
+          >
+            Jetzt bestellen
+          </a>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-topnote">Bestseller 🔥</div>
+          <h3>200 ml</h3>
+          <div class="price-desc">Für regelmäßige Anwendung.</div>
+          <div class="price">109 €</div>
+          <div class="small green">inkl. Versand gratis</div>
+          <div class="small">Beliebteste Wahl</div>
+          <a
+            href="https://buy.stripe.com/4gM9ATaXtdSY2TE0QefUQ00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary order-btn"
+          >
+            Jetzt bestellen
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Ist das Produkt natürlich?</h3>
+        <p>Ja, es basiert auf natürlichem Kollagen aus Fischhaut.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wie wird es geliefert?</h3>
+        <p>In temperaturgeschützter Verpackung direkt vom Hersteller. Das Produkt wird nicht gelagert, was maximale Frische unterstützt.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wie wird es angewendet?</h3>
+        <p>Auf leicht angefeuchtete Haut auftragen und anschließend eine Lotion oder Creme verwenden.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Wie soll es gelagert werden?</h3>
+        <p>Kühl und vor Hitze geschützt lagern.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="bestellen" class="final-cta">
+    <div class="container" style="max-width:900px;">
+      <h2>Bereit für deine Hautpflege?</h2>
+      <p>Wähle jetzt deine Größe und bestelle direkt online.</p>
+      <a href="#groesse" class="btn btn-light">Größe wählen</a>
+      <div class="hint">✓ Sichere Zahlung ✓ Schneller Versand ✓ Direkt vom Hersteller</div>
+    </div>
+  </section>
+
+  <footer>
+    Kosmetisches Produkt zur äußeren Anwendung. Individuelle Erfahrungen können variieren.
+  </footer>
+</body>
+</html>
